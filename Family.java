@@ -1,10 +1,30 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Family {
-    private List<String> members = List.of("Paul", "Aubree", "Harvest", "Ocean", "Everest");
+    private List<FamilyMember> members = List.of(
+            new FamilyMember.FamilyMemberBuilder("Paul")
+                .setAge(33)
+                .setIsAdult(true)
+                .build(),
+            new FamilyMember.FamilyMemberBuilder("Aubree")
+                .setAge(33)
+                .setIsAdult(true)
+                .build(),
+            new FamilyMember.FamilyMemberBuilder("Harvest")
+                .setAge(6)
+                .setIsAdult(false)
+                .build(),
+            new FamilyMember.FamilyMemberBuilder("Ocean")
+                .setAge(3)
+                .setIsAdult(false)
+                .build(),
+            new FamilyMember.FamilyMemberBuilder("Everest")
+                .setAge(1)
+                .setIsAdult(false)
+                .build()
+            );
 
     public ArrayList<String> getParents() {
         return members.stream()
