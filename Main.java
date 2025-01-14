@@ -16,5 +16,7 @@ public class Main {
         }
 
         children.forEach(System.out::println);
+
+        System.out.println(family.getNumberOfMembers());
     }
 }

@@ -17,4 +17,8 @@ public class Family {
             .filter(member -> !member.equals("Paul") && !member.equals("Aubree"))
             .toList();
     }
+
+    public int getNumberOfMembers() {
+        return members.size();
+    }
 }
